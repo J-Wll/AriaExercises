@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Making unusual code accessible using ARIA</title>
+    <link rel="stylesheet" href="./css/ex1style.css" />
+  </head>
+
+  <body>
+    <!-- For quick navigation between problems -->
+    <a href="../index.html">Main page</a>
+    <a href="ex01.html">Exercise 1 link</a>
+    <a href="ex02.html">Exercise 2 link</a>
+    <a href="ex03.html">Exercise 3 link</a>
+
+    <hr />
+    
+    <section class="button-group">
+      <h4>Do your thing</h4>
+      <a href="./examples/ex01.html" target="new"></a>
+      <span role="button" tabindex="0" class="button" id="button1">
+        Button 1
+      </span>
+      <span role="button" tabindex="0" class="button" id="button2">
+        Button 2
+      </span>
+      <span role="button" tabindex="0" class="button" id="button3">
+        Button 3
+      </span>
+      <span role="button" tabindex="0" class="button" id="button4">
+        Button 4
+      </span>
+      <span role="button" tabindex="0" class="button" id="button5">
+        Button 5
+      </span>
+    </section>
+
+    <hr />
+
+    <section class="button-group">
+      <h4>Suggested replacements</h4>
+      <button id="abutton1" class="abutton">Button 1</button>
+      <button id="abutton2" class="abutton">Button 2</button>
+      <button id="abutton3" class="abutton">Button 3</button>
+      <button id="abutton4" class="abutton">Button 4</button>
+      <button id="abutton5" class="abutton">Button 5</button>
+    </section>
+
+    <section>
+      <h4>Reasons for changes</h4>
+      <p>
+        The original buttons are made of a modified span tag within HTML, this
+        is bad practice as it requires defining additional attributes that are
+        inherently present in the native, semantic tag of button. These
+        attributes, if configured incorrectly would lead to accessibility
+        problems for some users.
+      </p>
+      <p>
+        Changing the span tag to a button and removing the now unnecessary
+        attributes not only makes the HTML more clear but makes sure that the
+        best practice and widely used roles, states and attributes are used.
+      </p>
+      <p>
+        Another change was in the colouring of the suggested replacement button,
+        slightly lightening the background and darkening the text. This slight
+        change in colours maintains the original design ethos yet is enough to
+        enhance the contrast ratio past the specified AA and AAA contrast
+        standards.
+      </p>
+      <p>
+        While this slight change may not be picked up by many users, it might
+        make a significant difference for those less-abled in terms of vision.
+        By improving the experience of these users on our website, we increase
+        their likelyhood of purchasing our products and appreciating our brand.
+      </p>
+      <p>
+        The colour standards applied are defined by
+        <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G183.html"
+          >W3C here</a>
+      </p>
+    </section>
+  </body>
+</html>

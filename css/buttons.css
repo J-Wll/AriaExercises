@@ -1,0 +1,20 @@
+
+span.button {
+    padding: 3px 5px;
+    border: .1px solid;
+    user-select: none;
+    background: #a6a6a6;
+    color: #464646;
+    display: inline-block;
+    margin-right:10px;
+    font: 400 13.3333px Arial;
+}
+
+span.button:hover {
+    background: #e6e6e6;
+    color: #263238;
+}
+
+span.button:active {
+    background: #f4f4f4;
+}

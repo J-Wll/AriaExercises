@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/buttons.css">
+</head>
+
+
+<body id="top">
+    <!-- For quick navigation between problems -->
+    <a href="index.html">Main page</a>
+    <a href="./examples/ex01.html">Exercise 1 link</a>
+    <a href="./examples/ex02.html">Exercise 2 link</a>
+    <a href="./examples/ex03.html">Exercise 3 link</a>
+    <hr/>
+    <header>
+        <h1>ARIA roles and states and properties</h1>
+    </header>
+    <main>
+        <article>
+            <h2>ARIA Exercises</h2>
+            <p>During your career as a developer or designer, you may come across some crazy looking code. Your task may
+                include correcting the code to make it pass accessibility or usability tests, but in some cases,
+                you will not be able to make 'breaking changes', so will
+                only be able to adapt the code, or add to it and not change it entirely. With this in mind, the
+                exercises below put you in the role of a developer. In some cases, you will be asked to modify existing
+                code and make suggestions, in others you will be asked to rewrite code as you see fit. <em>Do not break
+                    the page to fix the code</em> </p>
+            <p> You can either modify the code in this HTML document or click the link labelled <em>Code</em> to
+                download the section associated with it. Follow the instructions and do your best.</p>
+            <nav>
+                <ul>
+                    <li> <a href="#ex01">Exercise 1</a> </li>
+                    <li> <a href="#ex02">Exercise 2</a> </li>
+                    <li> <a href="#ex03">Exercise 3</a> </li>
+                </ul>
+            </nav>
+            </p>
+            <strong>Hint:</strong> Use accessibility tools for Chrome, and accessbility testing tools (available as
+            plugins,
+            <a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?utm_source=chrome-ntp-icon"
+                target="new">
+                Wave</a>, <a
+                href="https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd?utm_source=chrome-ntp-icon"
+                target="new">Axe</a>,
+            <a href="https://chrome.google.com/webstore/detail/siteimprove-accessibility/efcfolpjihicnikpmhnmphjhhpiclljc?utm_source=chrome-ntp-icon"
+                target="new">SiteImprove</a>)
+            </p>
+            <article class="exercise" id="ex01">
+                <h3>1. Making unusual code accessible using ARIA</h3>
+                <figure>
+                    <img src="./images/not_interesting.png" alt="The developer console in chrome">
+                    <figcaption>Image showing the developer console, with the accessibility tab open.
+                        The span element is highlighted and its node in the accessibility tree is shown on the right
+                    </figcaption>
+                </figure>
+
+                <p>The buttons below, labelled button 1, button 2 etc., are marked 'not interesting for accessibility'
+                    in the accessibility tab of your
+                    developer console. Your team cannot access the buttons easily with JavaScript, your client is not
+                    happy that disabled clients can't 'see' or use the buttons in an accessible way and your manager,
+                    who doesn't know a thing about html, tells you that <em>you cannot change the elements</em>, so you
+                    cannot just change the content entirely, but you can add attributes to it. In his words,
+                    <q>Just make it work!</q>
+                </p>
+                <p>With these restrictions in mind: </p>
+                <p><strong>a. </strong>Using 'role',and 'aria-label' ARIA attributes, and 'id' and 'tabindex' attributes
+                    , make these poorly coded buttons accessible, selectable without a mouse and easily usable in
+                    JavaScript.</p>
+                <p>
+                    <strong>b. </strong>These buttons will not pass the AA standard of WCAG, but your client doesn't
+                    want the buttons to
+                    look too different from the way they do now. Find out what's wrong, after adding the content above,
+                    and correct it, <em>without making drastic changes</em>
+                </p>
+                <p>
+                    <strong>c. </strong>You know better, but you should be gracious and helpful. Below the
+                    'button-group' section, create a new section
+                    containing the same buttons, with the heading 'Suggested replacements', designed with the most
+                    efficient HTML and CSS that will negate the need for some of the ARIA landmarks and attributes, will
+                    look the same, if not, very similar, will pass accessibility tests and give the team access to the
+                    buttons in the same way.
+                </p>
+                <p><strong>d. </strong>You might know better, but you still have to explain yourself. Below your new
+                    button
+                    group, add an article. Using clean HTML code, clearly justify why your solution is better than the
+                    provided code in a professional manner, using the sources that prove you are right and the original
+                    code is
+                    wrong. A few words <em>will not cut it.</em></p>
+                <section class="section-exercise">
+                    <a href="./examples/ex01.html" download>Download the HTML code</a>
+                    <h4>Do your thing</h4>
+                    <span class="button">
+                        Button 1
+                    </span>
+                    <span class="button">
+                        Button 2
+                    </span>
+                    <span class="button">
+                        Button 3
+                    </span>
+                    <span class="button">
+                        Button 4
+                    </span>
+                    <span class="button">
+                        Button 5
+                    </span>
+                </section>
+            </article>
+            <div class="right">
+                <a href="#top">Go to top</a>
+            </div>
+            <article class="exercise" id="ex02">
+                <h3>2. Add ARIA landmarks to a user form</h3>
+                <figure>
+                    <img src="./images/visual-impairment-simulation-goggles.jpg" alt="Visual impairment">
+                    <figcaption>Visual impairment affects nearly 300 million people worldwide. The image shows some
+                        people trying to read a document wearing visual impairment simulation goggles</figcaption>
+                </figure>
+                <p>Your client, an optician, wants a contact form for users to book sight tests. The client is very
+                    conscious of the fact that many of his customers may have problems with their vision, including
+                    Myopia, Hyperopia, Protanopia, Deuteranopia, Tritanopia and Retinal degeneration of other kinds.</p>
+                <p>As well as this, the client wants to be competitive, and not have a boring, black and white site, so
+                    that those without visual acuities are presented with a vibrant page. As such, the client has
+                    provided 3 probable colour schemes for you to use in creating the form.</p>
+                <figure>
+                    <img src="./images/color-schemes.png" alt="Colour schemes">
+                    <figcaption>The client has chosen three vibrant colour schemes. Adapt the colour selections from one
+                        of the groups, ensuring the output is accessible</figcaption>
+                </figure>
+                <p>The contact form will contain the following fields: First name, Surname, email, phone number,
+                    Postcode, Message, Appointment Date, Appointment time. </p>
+                <p>The Opticians' opening hours are Monday to Saturday, 8:30am to 5:30pm and appointments are <em>always
+                        half hour slots</em></p>
+                <p><strong>a. </strong>Because you don't know the terms they're
+                    referring to, you'll probably have no idea how to accomplish the task. Find out what each of the
+                    visual impairments described above means. Add a group of articles below your form that details each
+                    of the problems, how it affects users and what you have done in your form to alleviate your clients
+                    concerns.</p>
+
+                <p><strong>b.</strong> A simple form has already been created below by the client. Modify and add to it
+                    to accomplish the goals set by them, adding the required fields as described. <em>
+                        Ensure it meets reasonable accessibility standards.
+                    </em> Test your code to ensure it is
+                    accessible</p>
+                <p><strong>c. </strong> ARIA landmarks are not always required, but in this form, the button group
+                    should be assessed according to the authoring practices <a
+                        href="https://www.w3.org/WAI/ARIA/apg/patterns/radiobutton/">example</a>.
+                    Follow the link, read the example, implement it in the form.
+
+                </p>
+                <p><strong>d. </strong> Finish the form by styling and colouring it in a professional manner, adapting
+                    any
+                    one of the colour schemes shown.</p>
+
+                <section class="section-exercise">
+                    <a href="./examples/ex02.html" download>Download the HTML code</a>
+                    <h4>Do your thing</h4>
+                    <form action="make-appointment">
+                        <fieldset>
+                            <legend>Your details</legend>
+                            Mr <input type="radio" name="title" id="title1">
+                            Mrs <input type="radio" name="title" id="title2">
+                            Miss <input type="radio" name="title" id="title3">
+                            <input type="text" name="firstName" id="firstName" placeholder="First Name">
+                            <input type="text" name="surname" id="surname" placeholder="Surname">
+                            <input type="text" name="email" id="email" placeholder="Email">
+                            <input type="text" name="phone" id="phone" placeholder="Phone">
+                        </fieldset>
+                        <fieldset>
+                            <legend>Appointment</legend>
+                            <input type="text" name="date" id="date" placeholder="date">
+                            <input type="text" name="time" id="time" placeholder="Time">
+                        </fieldset>
+                        <fieldset>
+                            <legend>Message</legend>
+                            <input type="text" name="message" id="message">
+                        </fieldset>
+                        <input type="submit" value="Send">
+                    </form>
+
+                </section>
+            </article>
+            <div class="right">
+                <a href="#top">Go to top</a>
+            </div>
+            <article class="exercise" id="ex03">
+                <h3>Fix bad ARIA practices</h3>
+                <p>Ok, you've just started a new role. Great! Unfortunately, the previous employee had just heard about
+                    ARIA and before he left, decided to add the kitchen sink to every element he could find on the last
+                    bit of work he completed. It's your job to fix the code full of confusing, incorrect and unnecessary
+                    roles, landmarks and states, and simplify the code.</p>
+                <p><strong>a. </strong> Have a look at the html and find each bad practice. There are five rules of
+                    ARIA, you need to find which rule was broken and describe how the rule was broken. Do this in
+                    articles below the fixed code.
+                </p>
+                <p><strong>b. </strong>fix the code. Remove the invalid and incorrect ARIA code so that the document is
+                    using the correct landmarks where needed and doesn't have them where it isn't needed</p>
+                <p><strong>c. </strong> Removing the landmarks is definitely not going to fully correct this document.
+                    Ensure that the correct semantic tags are being used to correctly identify the types of content.
+                    Ensure that the styling remains consistent, <em>do not break the layout when you fix the code</em>
+                </p>
+                <section class="section-exercise">
+                    <a href="./examples/ex03.html" download>Download the HTML code</a>
+                    <h4>Do your thing</h4>
+                    <section>
+                        <div class="container">
+                            <header class="ex03-header" role="banner">
+                                <div class="h1" role="heading">Technology store</div>
+                                <div class="search-navigation">
+                                    <span class="search">
+                                        <label for="search">Search</label>
+                                        <input role="searchbox" aria-labelledby="search-label" type="text" name="search"
+                                            id="search">
+                                    </span>
+                                    <nav role="navigation" aria-label="navigation" class="shop-nav">
+                                        <ul>
+                                            <li>
+                                                <a href="#" role="link"> Home</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" role="link"> About</a>
+                                            </li>
+
+                                            </li>
+                                            <li> <a href="#" role="link"> Shop</a></li>
+                                            </li>
+                                            <li class="help-link"> <a href="#" role="link"> Help</a></li>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </header>
+                            <main role="main">
+                                <div class="jumbotron" role="article" title="The technology landscape">
+                                    <h2 role="heading" title="Innovation" aria-label="Innovation driven">INNOVATION
+                                        DRIVEN</h2>
+                                    <div>
+                                        <div class="left-jumbo">
+                                            <p role="note" title="Summary">
+                                                The technology landscape is constantly shifting, so we continue to
+                                                heavily invest in
+                                                providing our partners the solutions and services needed to flourish.
+                                                With access to the
+                                                most innovative and diverse portfolio of technology providers, and the
+                                                smartest
+                                                financial services proposition partners continue to deliver to best
+                                                solution for their
+                                                customer at the right price.
+                                            </p>
+                                        </div>
+                                        <div class="right-jumbo">
+                                            <img src="https://via.placeholder.com/300" alt="a computer" role="img">
+                                        </div>
+                                    </div>
+                                </div>
+                                <section role="article">
+                                    <h2 role="banner">Top products</h2>
+                                    <div class="featured">
+                                        <figure>
+                                            <img src="https://via.placeholder.com/150" alt="product image">
+                                            <img src="https://via.placeholder.com/150" alt="product image">
+                                            <img src="https://via.placeholder.com/150" alt="product image">
+                                        </figure>
+                                    </div>
+                                </section>
+                                <section role="article">
+                                    <h2 role="banner">Featured products</h2>
+                                    <div class="featured">
+                                        <figure>
+                                            <img src="https://via.placeholder.com/350" alt="product image">
+                                            <img src="https://via.placeholder.com/350" alt="product image">
+                                        </figure>
+                                    </div>
+                                </section>
+                                <section title="newsletter" role="article">
+                                    <h2 title="newsletter" aria-details="subscribe to our newsletter" role="banner">
+                                        Newsletter</h2>
+                                    <div id="newsletter-subscribe" class="newsletter">
+                                        <p>
+                                            Subscribe to our monthly newsletter to receive up to the minute information
+                                            about new products,
+                                            news and the latest technological innovations
+                                        </p>
+                                        <div>
+                                            <label for="newsletter">Subscribe</label>
+                                            <input role="newsletter-subscription" aria-labelledby="newsletter-label"
+                                                type="text" name="newsletter" id="newsletter"
+                                                placeholder="me@example.com">
+                                            <button type="button" role="button" title="button"> Subscribe</button>
+                                        </div>
+                                    </div>
+                                </section>
+
+                            </main>
+                        </div>
+                    </section>
+                </section>
+            </article>
+            <div class="right">
+                <a href="#top">Go to top</a>
+            </div>
+        </article>
+    </main>
+
+</body>
+
+</html>
