@@ -2,64 +2,140 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add ARIA landmarks to a user form</title>
     <link rel="stylesheet" href="./css/ex2style.css" />
 </head>
 
 <body>
-    <div style="position:sticky; top:1px; background-color: white; width:fit-content;">
+    <div style="
+        position: sticky;
+        top: 1px;
+        background-color: white;
+        width: fit-content;
+      ">
         <a href="../index.html">Main page</a>
         <a href="ex01.html">Exercise 1 link</a>
         <a href="ex02.html">Exercise 2 link</a>
         <a href="ex03.html">Exercise 3 link</a>
-        <hr/>
-      </div>
+        <hr />
+    </div>
     <section>
         <form action="">
             <fieldset class="my-3p">
                 <legend>Your details</legend>
-                <div class="md-5p">
-                Mr <input type="radio" name="title" id="title1">
-                Mrs <input type="radio" name="title" id="title2">
-                Miss <input type="radio" name="title" id="title3">
+                <div class="border">
+                <label for="radiogroup" id="groupLabel">Title selection</label>
+                <div class="md-5p" role="radiogroup" id="radiogroup" aria-labelledby="groupLabel">
+                    <label for="title1" id="label1">Mr</label>
+                    <input type="radio" name="title" id="title1" class="radioBut" aria-labelledby="label1" aria-checked="false"/>
+                    <label for="title2" id="label2">Mrs</label>
+                    <input type="radio" name="title" id="title2" class="radioBut" aria-labelledby="label2" aria-checked="false"/>
+                    <label for="title3" id="label3">Miss</label>
+                    <input type="radio" name="title" id="title3" class="radioBut" aria-labelledby="label3" aria-checked="false"/>
+                </div>
                 </div>
                 <div class="md-5p">
-                <input type="text" name="firstName" id="firstName" placeholder="First Name">
-                <input type="text" name="surname" id="surname" placeholder="Surname">
+                    <input type="text" name="firstName" id="firstName" placeholder="First Name/s" />
+                    <input type="text" name="surname" id="surname" placeholder="Last name" />
                 </div>
                 <div class="">
-                <input type="text" name="email" id="email" placeholder="Email">
-                <input type="text" name="phone" id="phone" placeholder="Phone">
-                <input type="text" name="postcode" id="postcode" placeholder="Postcode">
+                    <input type="text" name="email" id="email" placeholder="Email" />
+                    <input type="text" name="phone" id="phone" placeholder="Phone" />
+                    <input type="text" name="postcode" id="postcode" placeholder="Postcode" />
                 </div>
-
             </fieldset>
             <fieldset class="my-3p">
                 <legend>Appointment</legend>
                 <legend class="ft-1 my-3p">We're open Mon-Sat 8:30-17:30</legend>
-                <input type="text" name="date" id="date" placeholder="date">
-                <input type="text" name="time" id="time" placeholder="Time">
+                <input type="text" name="date" id="date" placeholder="Date" />
+                <input type="text" name="time" id="time" placeholder="Time" />
             </fieldset>
             <fieldset class="my-3p">
                 <legend>Message</legend>
-                <input type="text" name="message" id="message">
+                <input type="text" name="message" id="message" />
             </fieldset>
-            <input class ="my-3p" type="submit" value="Send">
+            <input class="my-3p" type="submit" value="Send" />
         </form>
     </section>
     <section>
-        <hr>
+        <hr />
         <h1>Eye conditions and the considerations made</h1>
-        <article><h2>General Retinal Degeneration</h2><p><b>What it is: </b>Catch all term for a variety of other conditions</p><p><b>Considerations made:</b></p></article>
-        <article><h2>Myopia</h2><p><b>What it is: </b>Nearsightedness - Distant objects look blurry</p><p><b>Considerations made:</b></p></article>
-        <article><h2>Hyperopia</h2><p><b>What it is: </b>Farsightedness - Nearby objects look blurry</p><p><b>Considerations made:</b></p></article>
-        <article><h2>Protanopia</h2><p><b>What it is: </b>Red-Green & Blue-Green colour blindness</p><p><b>Considerations made:</b></p><figure><img src="/images/protanopia-color-spectrum.jpg"><figcaption>Protanopia spectrun, <a href="https://www.color-blindness.com/protanopia-red-green-color-blindness/">from color-blindness.com</a></figcaption></figure></article>
-        <article><h2>Deuteranopia</h2><p><b>What it is: </b>Red-Green colour blindness</p><p><b>Considerations made:</b></p><figure><img src="/images/deuteranopia-color-spectrum.jpg"><figcaption>Deuteranopia spectrun, <a href="https://www.color-blindness.com/deuteranopia-red-green-color-blindness/">from color-blindness.com</a></figcaption></figure></article>
-        <article><h2>Tritanopia</h2><p><b>What it is: </b>Blue-Yellow colour blindness</p><p><b>Considerations made:</b></p><figure><img src="/images/tritanopia-color-spectrum.jpg"><figcaption>Tritanopia spectrun, <a href="https://www.color-blindness.com/tritanopia-blue-yellow-color-blindness/">from color-blindness.com</a></figcaption></figure></article>
-
+        <article>
+            <h2>General Retinal Degeneration</h2>
+            <p>
+                <b>What it is: </b>Catch all term for a variety of other conditions
+            </p>
+            <p><b>Considerations made:</b></p>
+        </article>
+        <article>
+            <h2>Myopia</h2>
+            <p><b>What it is: </b>Nearsightedness - Distant objects look blurry</p>
+            <p><b>Considerations made:</b></p>
+        </article>
+        <article>
+            <h2>Hyperopia</h2>
+            <p><b>What it is: </b>Farsightedness - Nearby objects look blurry</p>
+            <p><b>Considerations made:</b></p>
+        </article>
+        <article>
+            <h2>Protanopia</h2>
+            <p><b>What it is: </b>Red-Green & Blue-Green colour blindness</p>
+            <p><b>Considerations made:</b></p>
+            <figure>
+                <img src="/images/protanopia-color-spectrum.jpg" />
+                <figcaption>
+                    Protanopia spectrun,
+                    <a href="https://www.color-blindness.com/protanopia-red-green-color-blindness/">from
+                        color-blindness.com</a>
+                </figcaption>
+            </figure>
+        </article>
+        <article>
+            <h2>Deuteranopia</h2>
+            <p><b>What it is: </b>Red-Green colour blindness</p>
+            <p><b>Considerations made:</b></p>
+            <figure>
+                <img src="/images/deuteranopia-color-spectrum.jpg" />
+                <figcaption>
+                    Deuteranopia spectrun,
+                    <a href="https://www.color-blindness.com/deuteranopia-red-green-color-blindness/">from
+                        color-blindness.com</a>
+                </figcaption>
+            </figure>
+        </article>
+        <article>
+            <h2>Tritanopia</h2>
+            <p><b>What it is: </b>Blue-Yellow colour blindness</p>
+            <p><b>Considerations made:</b></p>
+            <figure>
+                <img src="/images/tritanopia-color-spectrum.jpg" />
+                <figcaption>
+                    Tritanopia spectrun,
+                    <a href="https://www.color-blindness.com/tritanopia-blue-yellow-color-blindness/">from
+                        color-blindness.com</a>
+                </figcaption>
+            </figure>
+        </article>
     </section>
 </body>
+
+<!-- Inline JS for easier submission -->
+<script>
+    function toggleChecked(){
+        // unchecks anything that's checked, then checks the clicked on radio button
+        radioArray.forEach((element) => {
+            element.setAttribute("aria-checked",false);
+        });
+        this.setAttribute("aria-checked",true);
+    }
+
+    let radioButs = document.getElementsByClassName("radioBut");
+    radioArray = Array.from(radioButs);
+    radioArray.forEach((element) => {
+      element.addEventListener('click', toggleChecked);
+    });
+</script>
 
 </html>
