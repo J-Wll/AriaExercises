@@ -24,19 +24,26 @@ aside {
     padding:1em;
 }
 
-/* #companyName{
-    
-} */
+.colourBlock{
+    background-color: #ef3938;
+    height: 3em;
+    width: 100%;
+}
 
 .border {
     /* border-width: 2px; */
     /* border-color: rgb(192, 192, 192); */
     border-width: 2px;
     border-style: groove;
-    border-color: #35425b;
+    border-color: #ef3938;
     border-image: initial;
     margin: 3px;
     padding: 3px;
+}
+
+figure img{
+    max-width: 500px;
+    width: 100%;
 }
 
 .fit-content {
@@ -56,6 +63,9 @@ aside {
     font-size: 16px;
 }
 
+input{
+    margin:2px
+}
 input[type=text] {
     width: 200px;
     height: 22px;
@@ -81,8 +91,3 @@ input[type=submit]{
     height: 2em;
 }
 
-.colourBlock{
-    background-color: #ef3938;
-    height: 3em;
-    width: 100%;
-}
