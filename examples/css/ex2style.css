@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    padding:1em;
+    padding: 0em 1em 0.5em 1em;
     background-color: #35425b;
     height: 5em;
     color: white;
@@ -26,8 +26,15 @@ aside {
 
 .colourBlock{
     background-color: #ef3938;
-    height: 3em;
+    height: 2em;
     width: 100%;
+}
+
+.companyName{
+    margin: 10px;
+    border: solid;
+    border-width: 0px 0px 40px 0px;
+    border-color: #ef3938;
 }
 
 .border {
@@ -39,6 +46,10 @@ aside {
     border-image: initial;
     margin: 3px;
     padding: 3px;
+}
+
+fieldset{
+    margin: 3px;
 }
 
 figure img{
@@ -66,28 +77,29 @@ figure img{
 input{
     margin:2px
 }
+
 input[type=text] {
-    width: 200px;
-    height: 22px;
+    max-width: 200px;
+    min-height: 22px;
     font-size: 18px;
 }
 
 #surname {
-    width: 312px;
+    max-width: 312px;
 }
 
 #postcode {
-    width: 100px;
+    max-width: 100px;
 }
 
 #message {
-    width: 99%;
+    max-width: 99%;
     /* max-width: 1062px; */
-    height: 2em;
+    min-height: 2em;
 }
 
 input[type=submit]{
-    width: 5em;
-    height: 2em;
+    max-width: 5em;
+    min-height: 2em;
 }
 
